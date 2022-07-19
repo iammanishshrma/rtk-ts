@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "store/storeHooks";
 import { decrement, increment } from "store/slices/counterSlice";
-import { count } from "store/slices/counterSlice";
+// import { count } from "store/slices/counterSlice";
 
 const App = () => {
   const dispatch = useAppDispatch();
