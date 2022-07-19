@@ -1,12 +1,17 @@
 import { useAppDispatch, useAppSelector } from "store/storeHooks";
 import { decrement, increment } from "store/slices/counterSlice";
+import { count } from "store/slices/counterSlice";
 
 const App = () => {
   const dispatch = useAppDispatch();
-  const count = useAppSelector((state) => state.counter.count);
+  const counter = useAppSelector((state) => state.counter.count);
+
+  // To get particular value from store in a component
+  // const counter = useAppSelector(count);
+
   return (
     <>
-      <div>{count}</div>
+      <div>{counter}</div>
       <button type="button" onClick={() => dispatch(increment())}>
         ++
       </button>
